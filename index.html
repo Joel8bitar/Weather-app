@@ -1,35 +1,44 @@
-<html>
-  <head>
-    <title>Weather App</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script type="text/javascript" src="app.js"></script>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en" >
 
-    <div class="weather-app">
-      <div class="left">
-	<div class="temperature"><span id="temperature">0</span>&deg;</div> 
-	<div class="location"><span id="location">Unknown</span></div>
-      </div>	
-      <div class="right">
-	<div class="top">
-	  <img id="icon" width="75px" src="imgs/codes/200.png" />
-	</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+  <script  src="js/app.js"></script>
+  
+  <title>Your local weather</title>
 
-	  <div class="bottom">
-	  
-	  <div class="humidity">
-	    <img src="imgs/humidity.png" height="16px" />
-	    <span id="humidity">0</span>%
-	  </div>
-	  
-	  <div class="wind">
-	    <span id="wind">0</span> mph <span id="direction">N</span>
-	  </div>
-	  
-	</div>
+      <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+<div id='main'>
+    <iframe src="http://free.timeanddate.com/clock/i69131s1/n239/tlse/fn12/fs18/fcfff/tc23395b/bls0/brs0/bts4/btc00b/tt0/th1" frameborder="0" width="415" height="25"></iframe>
+
+<div id="weatherDisplay">
+ <div id="date">
+  </div>
+   </div>
+    <button id='cel' class='btn btn-primary'>Celsius &#x2103;</button>
+      <button id='fah' class='btn btn-primary'>Fahrenheit &#x2109;</button>
+        <div id="weatherOptions">
+  </div>
+</div>
+	<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="current-weather-position">
+						<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Show weather forecast for 5 days</button>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div id="collapseExample" class="collapse jumbotron">
+			<div id="forecastWeather" class="forecast-weather collapse">
+        <h2>Five day weather forecast</h2>
       </div>
-    </div>
-    
-  </body>
+		</div>
+</body>
 </html>
